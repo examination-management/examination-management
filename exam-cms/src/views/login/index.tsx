@@ -1,33 +1,45 @@
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Form, Icon, Input, Button, Checkbox,message } from "antd";
 import * as React from "react";
 import "./index.css"
 import {WrappedFormUtils} from "antd/lib/form/Form"
 import {inject,observer} from "mobx-react"
 interface Props{
   form:WrappedFormUtils,
-  user:any
+  user:any,
+  history:any,
+  abc?:string
 }
 @inject("user")
-class Home extends React.Component <Props>{
-  handleSubmit=(e:React.FormEvent)=> {
+class Login extends React.Component <Props>{
+  constructor(props:Props){
+    super(props);
+  }
+  handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    this.props.form.validateFields((err, values) => {
+    this.props.form.validateFields(async (err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
-        let result=await this.props.user.login(values)
-
+        console.log('Received values of form: ', values);
+        console.log(this.props)
+        const {code, msg} = await this.props.user.login(values);
+        console.log(code,msg)
+        if (code === 1){
+          // 跳转路由
+          this.props.history.replace('/home');
+        }else{
+          // 提示错误
+          message.error(msg || '用户名或密码错误');
+        }
       }
     });
   };
 
   render() {
-    console.log(this.props.user.login)
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator("user_name", {
-            validateTrigger:"onBlur",
+             validateTrigger: 'onBlur',
             rules: [{ required: true, message: "Please input your username!" },{
               validator:(rule,value,callback)=>{
                 if(/[a-z]{5,20}/.test(value)){
@@ -83,4 +95,4 @@ class Home extends React.Component <Props>{
     );
   }
 }
-export default Form.create()(Home);
+export default Form.create()(Login);

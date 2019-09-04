@@ -1,5 +1,6 @@
 import { Breadcrumb, Dropdown, Icon, Layout, Menu } from 'antd';
 import 'antd/dist/antd.css';
+import './index.css'
 import * as React from 'react';
 const { SubMenu } = Menu;
 const { Content, Header, Sider } = Layout;
@@ -27,7 +28,6 @@ class Home extends React.Component {
     return (
       <Layout>
         <Header className="header">
-          <div className="logo" />
           <Menu
             theme="light"
             mode="horizontal"
@@ -131,7 +131,7 @@ class Home extends React.Component {
                 padding: 24,
               }}
             >
-              Content
+              111111
           </Content>
           </Layout>
         </Layout>

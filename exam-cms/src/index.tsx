@@ -1,11 +1,14 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
-
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "./index.css";
+import RouterView from "./router/routerView";
+import { routes } from "./router/routes";
+import { Provider } from "mobx-react";
+import store from "./store";
+import "antd/dist/antd.css";
 ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
+  <Provider {...store}>
+    <RouterView routes={routes} />
+  </Provider>,
+  document.getElementById("root") as HTMLElement
 );
-registerServiceWorker();

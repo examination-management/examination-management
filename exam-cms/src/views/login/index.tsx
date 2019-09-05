@@ -2,11 +2,13 @@ import * as React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import {WrappedFormUtils} from 'antd/lib/form/Form'
 import {inject, observer} from 'mobx-react'
+// import {History} from "./history/index";
 import './index.css'
 
 interface Props {
   form: WrappedFormUtils,
-  user: any
+  user: any,
+  history:History
 }
 
 @inject('user')
@@ -20,6 +22,7 @@ class LoginPage extends React.Component<Props>{
         const result = await this.props.user.login(values);
         if (result === 1){
           // 跳转路由
+          // this.props.history.push('/main')
         }else{
           // 提示错误
         }

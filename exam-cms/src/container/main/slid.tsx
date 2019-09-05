@@ -1,13 +1,23 @@
 import * as React from "react";
+import {inject, observer} from 'mobx-react';
 import { Menu, Icon} from 'antd';
-import {inject, observer} from 'mobx-react'
-const { SubMenu } = Menu;
 
+const { SubMenu } = Menu;
+interface Props {
+  question: any
+}
 @inject('question')
 @observer
 class Slid extends React.Component {
   state = {
     collapsed: false,
+    slidList:[
+           {con:"试题管理",children:["添加试题","试题分类","查看试题"]},
+           {con:"用户管理"},
+           {con:"考试管理"},
+           {con:"班级管理"},
+           {con:"阅卷管理"}
+       ]
   };
   toggleCollapsed = () => {
     this.setState({
@@ -15,10 +25,10 @@ class Slid extends React.Component {
     });
   };
   public render() {
-    console.log(this.props)
+    let {slidList}=this.state;
     return (
       <div style={{ width: 256 }}>
-
+       
       </div>
     );
   }

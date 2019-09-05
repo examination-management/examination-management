@@ -9,31 +9,25 @@ export default class RouterView extends Component {
     let routerArr = routes.filter(item => !item.redirect);
     let redirectArr = routes.filter(item => item.redirect);
     return (
-      <BrowserRouter>
-        <Switch>
-          {routerArr.map((item, index) => (
-            <Route
-              path={item.path}
-              key={index}
-              render={props => {
-                return (
-                  <item.component
-                    list={item.children}
-                    {...props}
-                  ></item.component>
-                );
-              }}
-            ></Route>
-          ))}
-          {redirectArr.map((item, index) => (
-            <Redirect
-              from={item.path}
-              key={index}
-              to={item.redirect}
-            ></Redirect>
-          ))}
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        {routerArr.map((item, index) => (
+          <Route
+            path={item.path}
+            key={index}
+            render={props => {
+              return (
+                <item.component
+                  {...props}
+                  routes={item.children}
+                ></item.component>
+              );
+            }}
+          ></Route>
+        ))}
+        {redirectArr.map((item, index) => (
+          <Redirect from={item.path} key={index} to={item.redirect}></Redirect>
+        ))}
+      </Switch>
     );
   }
 }

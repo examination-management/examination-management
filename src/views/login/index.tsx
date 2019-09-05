@@ -1,5 +1,6 @@
 import { Form, Icon, Input, Button, Checkbox,message } from "antd";
 import * as React from "react";
+import {setToken} from '../../utils/index'
 import "./index.css"
 import {WrappedFormUtils} from "antd/lib/form/Form"
 import {inject,observer} from "mobx-react"
@@ -15,8 +16,9 @@ class Login extends React.Component <Props>{
     this.props.form.validateFields(async(err, values) => {
       if (!err) {
         console.log("Received values of form: ", values);
-        let {code,msg}=await this.props.user.login(values)
+        let {code,msg,token}=await this.props.user.login(values)
           if(code==1){
+            setToken(token)
             this.props.history.replace("/home")
           }else{
             message.error(msg||"用户名或者密码错误")

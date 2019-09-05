@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Breadcrumb, Dropdown, Icon, Layout, Menu } from "antd";
-const { Content, Header, Sider } = Layout;
+import {Icon, Layout, Menu } from "antd";
+const { Sider } = Layout;
 import { NavLink } from "react-router-dom";
 const { SubMenu } = Menu;
 class Osider extends React.Component {

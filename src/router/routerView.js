@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
-export default class RouterView extends Component {
+export default class routerView extends Component {
   constructor(props) {
     super(props);
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -2446,3 +2447,38 @@ In the future, we might start automatically compiling incompatible third-party m
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+=======
+# 考试管理后台
+
+## 启动项目
+- 初始化
+```js
+create-react-app.cm exam-cms --scripts-version=react-scripts-ts
+```
+
+- 启服务
+```js
+npm run start
+```
+
+## 环境搭建
+- 引入装饰器
+```js
+npm install --save-dev @babel/plugin-proposal-decorators
+```
+
+- 引入路由
+```js
+npm install --save-dev react-router-dom @types/react-router-dom
+```
+
+- 引入mobx
+```js
+npm install --save-dev mobx mobx-react
+```
+
+- 引入antd
+```js
+npm install --save-dev antd
+```
+>>>>>>> 9e353a35d2fa83eec5bc3e2230ad24b2b67e7117

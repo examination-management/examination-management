@@ -1,7 +1,7 @@
 import * as React from "react";
-import Header from "../../container/main/header";
-import Content from "../../container/main/content";
-import Slid from "../../container/main/slid";
+import Header from "../../components/oheader";
+import Content from "../../components/oconent";
+import Slid from "../../components/osider";
 
 class Main extends React.Component{
   public render() {

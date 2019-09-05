@@ -1,9 +1,6 @@
 .login-form {
     max-width: 300px;
-    position: absolute;
-    top:40%;
-    left: 50%;
-    transform: translate(-50%,-50%)
+    margin: 20px auto;
 }
 
 .login-form-forgot {

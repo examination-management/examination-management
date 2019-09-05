@@ -1,21 +1,19 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import RouterView from './router/RouterView';
-import router from './router/router';
-import {BrowserRouter} from 'react-router-dom';
 import "./index.css";
-import 'antd/dist/antd.css';
+import RouterView from "./router/routerView";
+import { routes } from "./router/routes";
+import { Provider } from "mobx-react";
+import { BrowserRouter} from 'react-router-dom'
 
-
-import {Provider} from 'mobx-react';
-import store from './store'
-
+import store from "./store";
 import "antd/dist/antd.css";
 ReactDOM.render(
   <Provider {...store}>
-    <BrowserRouter> 
-      <RouterView routes={router.routes}/>
-    </BrowserRouter>
+          <BrowserRouter>
+          <RouterView routes={routes} />
+          </BrowserRouter>
+   
   </Provider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );

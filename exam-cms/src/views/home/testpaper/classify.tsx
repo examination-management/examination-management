@@ -1,15 +1,18 @@
 import * as React from 'react';
 import {inject,observer} from "mobx-react"
 import { Tag } from 'antd';
-import { Input, Select } from 'antd';
+import {  Select } from 'antd';
 import "./content.css"
 const { Option } = Select;
 @inject("question")
+@observer
 class Classify extends React.Component {
     state={
         classifydata:[]
     }
     public render(){
+        let {classifydata}=this.state;
+        console.log(classifydata)
         return(
             <div className='content-wrap'>
             <div>
@@ -46,17 +49,18 @@ class Classify extends React.Component {
                     <Tag color="magenta">周考1</Tag>
                   </div>
                   <div>dingshaoshan发布</div>
+                  
             </div>
           </div>
         )
     }
-    componentDidMount(){
-        let getlist=async ()=>{
-            let reult=await this.props["question"].getQuestion()
-            console.log(reult,"ddddddddddddddddd")
-        }
-        getlist()
+    componentDidMount(){ 
+      this.getlist()
     }
+    public getlist=async ()=>{
+      let reult=await this.props["question"].getQuestion()
+      this.setState({classifydata:reult.data})
+  }
 
 }
 export default Classify

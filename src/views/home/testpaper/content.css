@@ -8,18 +8,23 @@
     height: 60px;
     line-height: 60px;
     font-size: 18px;
+    padding-left: 10px;
 }
 .classify{
     height: 100%;
-    
+    background: #EFF1F5;
 }
 .content-header{
     height: 100%;
     display: flex;
     flex-direction: column;
     font-size: 12px;
+    overflow: hidden;
+     border-radius: 10px;
     background: #fff;
-    border-radius: 10px;
+   
+   
+    
 }
 .classifyTitle{
     width: 70px;

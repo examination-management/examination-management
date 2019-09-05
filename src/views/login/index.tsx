@@ -16,8 +16,8 @@ class Login extends React.Component <Props>{
     this.props.form.validateFields(async(err, values) => {
       if (!err) {
         console.log("Received values of form: ", values);
-        let {code,msg,token}=await this.props.user.login(values)
-          if(code==1){
+        const {code,msg,token}=await this.props.user.login(values)
+          if(code===1){
             setToken(token)
             this.props.history.replace("/home")
           }else{

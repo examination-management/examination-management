@@ -1,8 +1,9 @@
 import { Form, Icon, Input, Button, Checkbox,message } from "antd";
 import * as React from "react";
-import "./index.css"
+
 import {WrappedFormUtils} from "antd/lib/form/Form"
 import {inject,observer} from "mobx-react"
+import "./index.css"
 interface Props{
   form:WrappedFormUtils,
   user:any,
@@ -19,7 +20,7 @@ class Login extends React.Component <Props>{
     this.props.form.validateFields(async (err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        console.log(this.props)
+        console.log(this.props.user)
         const {code, msg} = await this.props.user.login(values);
         console.log(code,msg)
         if (code === 1){

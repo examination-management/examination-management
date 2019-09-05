@@ -1,4 +1,5 @@
 import {observable, action} from 'mobx'
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,16 @@ class Question{
     // ];
     // @observable num=0
     
+=======
+import {getQuestion} from '../../service/index'
+
+class Question{
+    @action async getQuestion(params: any): Promise<any>{
+        let result: any = await getQuestion(params);
+        console.log('question...', result);
+        // return result
+    }
+>>>>>>> 9f23b233a9c4510d0254a29d26b5b07391ead148
 }
 
 export default Question;

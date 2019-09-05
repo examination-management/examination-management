@@ -10,6 +10,7 @@ import 'antd/dist/antd.css';
 import {Provider} from 'mobx-react';
 import store from './store'
 
+import "antd/dist/antd.css";
 ReactDOM.render(
   <Provider {...store}>
     <BrowserRouter> 

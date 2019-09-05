@@ -42,8 +42,12 @@ class Osider extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="5">添加用户</Menu.Item>
-            <Menu.Item key="6">用户展示</Menu.Item>
+            <Menu.Item key="5">
+              <NavLink to="/home/adduser">添加用户</NavLink>
+            </Menu.Item>
+            <Menu.Item key="6">
+              <NavLink to="/home/usershow">展示用户</NavLink>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub3"
@@ -54,8 +58,14 @@ class Osider extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="7">添加考试</Menu.Item>
-            <Menu.Item key="8">试卷列表</Menu.Item>
+            <Menu.Item key="7">
+              {" "}
+              <NavLink to="/home/addexam">添加考试</NavLink>
+            </Menu.Item>
+            <Menu.Item key="8">
+              {" "}
+              <NavLink to="/home/examlist">试卷列表</NavLink>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub4"
@@ -66,9 +76,15 @@ class Osider extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="9">班级管理</Menu.Item>
-            <Menu.Item key="10">教室管理</Menu.Item>
-            <Menu.Item key="11">学生管理</Menu.Item>
+            <Menu.Item key="9">
+              <NavLink to="/home/class">班级管理</NavLink>
+            </Menu.Item>
+            <Menu.Item key="10">
+              <NavLink to="/home/classrome">教室管理</NavLink>
+            </Menu.Item>
+            <Menu.Item key="11">
+              <NavLink to="/home/student">学生管理</NavLink>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub5"
@@ -79,7 +95,7 @@ class Osider extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="12">特批班级</Menu.Item>
+            <Menu.Item key="12"> <NavLink to="/home/stayclass">待批班级</NavLink></Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

@@ -1,66 +1,69 @@
-import * as React from 'react';
-import {inject,observer} from "mobx-react"
-import { Tag } from 'antd';
-import {  Select } from 'antd';
-import "./content.css"
-const { Option } = Select;
-@inject("question")
-@observer
+import * as React from "react";
+import "./css/classify.css";
 class Classify extends React.Component {
-    state={
-        classifydata:[]
-    }
-    public render(){
-        let {classifydata}=this.state;
-        console.log(classifydata)
-        return(
-            <div className='content-wrap'>
-            <div>
-            <div className='title'>查看试题</div>
-            <div className='classify'>
-                <div className='content-header'>
-                  <div className='classifyTitle'>课程类型</div>
-                  <div className='classify-con'>
-                    <li>All</li>
-                    <li>javaScript上</li>
-                    <li>javaScript上下</li>
-                    <li>模块开发</li>
-                    <li>移动端开发</li>
-                    <li>node基础</li>
-                    <li>组件开发(vue)</li>
-                    <li>渐进式开发(react)</li>
-                    <li>项目实战</li>
-                    <li>javaScript高级</li>
-                    <li>node高级</li>
-                  </div>
-                  <div className='exam'>
-                  <div>考试类型 : <input type="text"/></div>
-                  <div>题目类型 : <input type="text"/></div>
-                </div>
-                </div>
+  state={
+    isdialog:false
+  }
+  public render() {
+    let {isdialog}=this.state
+    return (
+      <div className="classbox">
+        <h2 className="tit">试题分类</h2>
+        <div className="show">
+          <button className="addbtn" onClick={this.addclassify} >+添加类型</button>
+          <table className="table">
+            <thead>
+              <th>类型ID</th>
+              <th>类型名称</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>774318-730z8m</td>
+                <td>简答题</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>br9d6s-wh46i</td>
+                <td>代码阅读题</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>fwf0t-wla1q</td>
+                <td>代码补全</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>n66k4n-i9zpen</td>
+                <td>修改bug</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>v8i73-r8oai</td>
+                <td>手写代码</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className={isdialog?"dialog isshow":"dialog"}>
+          <div className="addbox">
+            <span>X</span>
+            <div className="addbody">
+              <h2>创建新类型</h2>
+              <input type="text" placeholder="请输入类型名称" />
             </div>
-            </div>
-            
-            <div className='content-con'>
-                  <div className='content-con-item'>
-                    <p>机器人归位</p>
-                    <Tag color="magenta">代码补全</Tag>
-                    <Tag color="magenta">avaScript上</Tag>
-                    <Tag color="magenta">周考1</Tag>
-                  </div>
-                  <div>dingshaoshan发布</div>
-                  
+            <div className="addsub">
+              <button className="surebtn">确定</button>
+              <button className="cancelbtn" onClick={()=>{this.setState({isdialog:false})}}>取消</button>
             </div>
           </div>
-        )
-    }
-    componentDidMount(){ 
-      this.getlist()
-    }
-    public getlist=async ()=>{
-      let reult=await this.props["question"].getQuestion()
-      this.setState({classifydata:reult.data})
+        </div>
+      </div>
+    );
   }
-
+  public addclassify=()=>{
+    this.setState({isdialog:!this.state.isdialog})
+  }
 }
-export default Classify
+export default Classify;

@@ -28,10 +28,10 @@ instance.interceptors.response.use(
   },
   error => {
     console.log("error...", error.response);
-    if (error.response.status && error.response.status !== 200) {
-      message.error(error.response.statusText);
-    } else {
-    }
+    // if (error.response.status && error.response.status !== 200) {
+    //   message.error(error.response.statusText);
+    // } else {
+    // }
     return Promise.resolve(error);
   }
 );

@@ -2,7 +2,6 @@ import axios from "axios";
 import { AxiosResponse } from "axios/index";
 import { message } from "antd";
 import { getToken } from "./index";
-import { HttpInfo } from "../types/index";
 
 const instance = axios.create({
   baseURL: "http://169.254.169.33:7001",

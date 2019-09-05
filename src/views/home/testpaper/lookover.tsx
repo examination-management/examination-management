@@ -2,7 +2,7 @@ import * as React from 'react';
 import {inject,observer} from "mobx-react"
 import { Tag } from 'antd';
 import {  Select } from 'antd';
-import "./content.css"
+import "./css/lookover.css"
 const { Option } = Select;
 @inject("question")
 @observer
@@ -11,7 +11,8 @@ class Lookover extends React.Component {
         classifydata:[]
     }
     public render(){
-        const {classifydata}=this.state;
+        let {classifydata}=this.state;
+        console.log(classifydata)
         return(
             <div className='content-wrap'>
             <div>
@@ -57,7 +58,7 @@ class Lookover extends React.Component {
       this.getlist()
     }
     public getlist=async ()=>{
-      const reult=await this.props["question"].getQuestion()
+      let reult=await this.props["question"].getQuestion()
       this.setState({classifydata:reult.data})
   }
 

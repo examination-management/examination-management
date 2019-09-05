@@ -1,46 +1,41 @@
 import { Form, Icon, Input, Button, Checkbox,message } from "antd";
 import * as React from "react";
-
+import {setToken} from '../../utils/index'
+import "./index.css"
 import {WrappedFormUtils} from "antd/lib/form/Form"
 import {inject,observer} from "mobx-react"
-import "./index.css"
 interface Props{
   form:WrappedFormUtils,
   user:any,
-  history:any,
-  abc?:string
+  history:any
 }
 @inject("user")
 class Login extends React.Component <Props>{
-  constructor(props:Props){
-    super(props);
-  }
-  handleSubmit = (e: React.FormEvent) => {
+  handleSubmit=(e:React.FormEvent)=> {
     e.preventDefault();
-    this.props.form.validateFields(async (err, values) => {
+    this.props.form.validateFields(async(err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        console.log(this.props.user)
-        const {code, msg} = await this.props.user.login(values);
-        console.log(code,msg)
-        if (code === 1){
-          // 跳转路由
-          this.props.history.replace('/home');
-        }else{
-          // 提示错误
-          message.error(msg || '用户名或密码错误');
-        }
+        console.log("Received values of form: ", values);
+        let {code,msg,token}=await this.props.user.login(values)
+          if(code==1){
+            setToken(token)
+            this.props.history.replace("/home")
+          }else{
+            message.error(msg||"用户名或者密码错误")
+          }
       }
     });
   };
-
   render() {
+    console.log(this.props.user.login)
     const { getFieldDecorator } = this.props.form;
+    const {user_name, user_pwd} = this.props.user.account;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator("user_name", {
-             validateTrigger: 'onBlur',
+            validateTrigger:"onBlur",
+            initialValue: user_name,
             rules: [{ required: true, message: "Please input your username!" },{
               validator:(rule,value,callback)=>{
                 if(/[a-z]{5,20}/.test(value)){
@@ -60,6 +55,7 @@ class Login extends React.Component <Props>{
         <Form.Item>
           {getFieldDecorator("user_pwd", {
             validateTrigger:"onBlur",
+            initialValue: user_pwd,
             rules: [{validator:(rule,value,callback)=>{
               if(/^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/.test(value)){
                 callback()
@@ -80,6 +76,12 @@ class Login extends React.Component <Props>{
             valuePropName: "checked",
             initialValue: true
           })(<Checkbox>Remember me</Checkbox>)}
+          </Form.Item>
+          <Form.Item>
+          {getFieldDecorator("remember", {
+            valuePropName: "checked",
+            initialValue: true
+          })(<Checkbox>Auto login in 7 days</Checkbox>)}
           <a className="login-form-forgot" href="">
             Forgot password
           </a>

@@ -65,12 +65,12 @@ class Mangement extends React.Component {
   public render() {
     const { size,flag } = this.state;
     return (
-      <div className="ant-layout1">
+      <div className="layout1">
         <h2>
           班级管理
         </h2>
-        <div className="ant-layout-content1">
-          <div className="ant-layout-content-box">
+        <div className="layout-content1">
+          <div className="layout-content-box">
             <div>
             <Button type="primary" className="button"> 添加班级</Button>
             </div>
@@ -91,7 +91,6 @@ class Mangement extends React.Component {
       </div>
     );
   }
-
-    
+  
 }
 export default Mangement

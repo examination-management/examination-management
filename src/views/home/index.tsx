@@ -16,7 +16,7 @@ class Home extends React.Component {
           <Oheader></Oheader>
           <Layout>
             <Osider></Osider>
-            <Layout style={{ padding: "0 24px 24px" }}>
+            <Layout>
               <Oconent {...this.props}></Oconent>
             </Layout>
           </Layout>

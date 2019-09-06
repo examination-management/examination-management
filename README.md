@@ -37,5 +37,8 @@ npm install --save-dev antd
 ```
 =======
 ```
+<<<<<<< HEAD
 >>>>>>> 487185cc89bb05c6cd9cef83bcfe74799a9cc95c
 >>>>>>> dawei
+=======
+>>>>>>> 66476c03e87782e6ad4476bbd1a293cff98b9e55

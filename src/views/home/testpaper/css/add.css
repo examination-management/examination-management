@@ -4,9 +4,13 @@ h2{
     padding: 20px 0;
     margin: 10px 0;
 }
+<<<<<<< HEAD
 .ant-layout-content{
     padding: 0 !important;
 }
+=======
+
+>>>>>>> 66476c03e87782e6ad4476bbd1a293cff98b9e55
 .ant-form-item .input{
     width: 60%;
     height: 40px;

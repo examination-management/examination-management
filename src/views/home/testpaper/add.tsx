@@ -57,11 +57,11 @@ class Add extends React.Component {
     public render(){
         const { value,options } = this.state;
         return(
-            <div className="ant-layout">
+            <div className="ant-layout1">
                 <h2>
                 试题添加
                 </h2>
-                <div className="ant-layout-content">
+                <div className="ant-layout-content1">
                     <div className="ant-layout-content-box" >
                         <div className="ant-row ant-form-item">
                            <h4>题目信息</h4>

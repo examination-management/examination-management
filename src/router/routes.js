@@ -8,6 +8,7 @@ let Login=Loadable({loading:Loading,loader:()=>import("../views/login")})
 let Add=Loadable({loading:Loading,loader:()=>import("../views/home/testpaper/add")})
 let Classify=Loadable({loading:Loading,loader:()=>import("../views/home/testpaper/classify")})
 let Lookover=Loadable({loading:Loading,loader:()=>import("../views/home/testpaper/lookover")})
+let Mangement =Loadable({loading:Loading,loader:()=>import("../views/home/testpaper/management")})
 const routes = [
     {
         component:Home,
@@ -21,6 +22,10 @@ const routes = [
         },{
             component:Lookover,
             path:"/home/lookover"
+        },
+        {
+            component:Mangement,
+            path:"/home/mangement"
         },{
             path:"/home" ,
             redirect:"/home/classify"

@@ -16,6 +16,12 @@ let Class=Loadable({loading:Loading,loader:()=>import("../views/home/class/class
 let Classrome=Loadable({loading:Loading,loader:()=>import("../views/home/class/classrome")})
 let Student=Loadable({loading:Loading,loader:()=>import("../views/home/class/student")})
 let Stayclass=Loadable({loading:Loading,loader:()=>import("../views/home/yueparper/stayclass")})
+let Api=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/api")})
+let Iddata=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/iddata")})
+let Port=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/port")})
+let Power=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/power")})
+let Userdata=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/userdata")})
+let View=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/view")})
 const routes = [
     {
         component:Home,
@@ -34,7 +40,29 @@ const routes = [
             path:"/home/adduser"
         },{
             component:Usershow,
-            path:"/home/usershow"
+            path:"/home/usershow",
+            children:[{
+                component:Api,
+                path:"/home/usershow/api",
+            },{
+                component:Iddata,
+                path:"/home/usershow/iddata",
+            },{
+                component:Port,
+                path:"/home/usershow/port",
+            },{
+                component:Power,
+                path:"/home/usershow/power",
+            },{
+                component:Userdata,
+                path:"/home/usershow/userdata",
+            },{
+                component:View,
+                path:"/home/usershow/view",
+            },{
+                path:"/home/usershow" ,
+                redirect:"/home/usershow/userdata"
+            }]
         },{
             component:Addexam,
             path:"/home/addexam"

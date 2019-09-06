@@ -4,7 +4,6 @@ import * as React from "react";
 import Osider from "../../components/osider";
 import Oheader from "../../components/oheader";
 import Oconent from "../../components/oconent";
-// import Wraper from "../../components/wraper";
 import "./css/index.css"
 class Home extends React.Component {
   constructor(props: any) {
@@ -22,7 +21,6 @@ class Home extends React.Component {
             </Layout>
           </Layout>
         </Layout>
-      {/* <Wraper></Wraper> */}
       </div>
     );
   }

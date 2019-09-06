@@ -14,7 +14,11 @@ class Home extends React.Component {
       <div className="box">
         <Layout>
           <Oheader></Oheader>
+<<<<<<< HEAD
           <Layout>
+=======
+          <Layout className="box-list">
+>>>>>>> luxuan
             <Osider></Osider>
             <Layout style={{ padding: "0 24px 24px" }}>
               <Oconent {...this.props}></Oconent>

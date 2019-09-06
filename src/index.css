@@ -5,6 +5,12 @@ body {
   width: 100%;
   height: 100%;
 }
+<<<<<<< HEAD
 .ant-layout-content{
   padding: 0 !important;
+=======
+#root{
+  width: 100%;
+  height: 100%;
+>>>>>>> luxuan
 }

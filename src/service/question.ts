@@ -4,4 +4,8 @@ export let getQuestion = (params: object)=>{
 }
 export let addQuestion=(params:object)=>{
     return request.post("/exam/questions",params)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> luxuan

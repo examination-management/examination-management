@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h2{
     width: 100%;
     height: 70px;
@@ -6,27 +7,67 @@ h2{
 }
 
 .ant-form-item .input{
+=======
+
+.layout1{
+    width: 100%;
+    height: 750px;
+    background: #f0f2f5;
+    position: relative;
+
+}
+.layout h2{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+
+}
+.layout-content1{
+    width: 100%;
+    height: 100%;
+    background: #f0f2f5;
+}
+.form-item .input{
+>>>>>>> luxuan
     width: 60%;
     height: 40px;
     margin: 20px;
 }
+<<<<<<< HEAD
 .ant-layout-content-box{
    width: 1030px;
    height: 1180px;
+=======
+.layout-content-box{
+    width: 90%;
+    height: 90%;
+>>>>>>> luxuan
     background: #fff;
     border-radius: 20px;
     margin:20px auto;
 }
+<<<<<<< HEAD
 .ant-form-item{
     width: 100%;
 }
 .ant-form-item h4{
+=======
+.form-item{
+    width: 100%;
+}
+.form-item h4{
+>>>>>>> luxuan
     width: 100%;
     height: 40px;
     line-height: 40px;
     padding-left: 20px;
 }
+<<<<<<< HEAD
 .ant-form-item p{
+=======
+.form-item p{
+>>>>>>> luxuan
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -56,11 +97,21 @@ h2{
     background: #fff;
     border-radius: 10px;
     border: 1px solid #ccc;
+<<<<<<< HEAD
 }
+=======
+    margin: 20px;
+}
+
+>>>>>>> luxuan
 .for-controlbar{
     width: 100%;
     height: 100%;
     display: flex;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> luxuan
     flex-direction: column;
 }
 .for-controlbar ul{
@@ -104,4 +155,8 @@ h2{
 }
 .input1{
     border: none;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> luxuan

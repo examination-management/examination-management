@@ -1,3 +1,5 @@
+
+
 import Loadable from "react-loadable"
 import React from "react"
 function Loading(){
@@ -16,12 +18,15 @@ let Class=Loadable({loading:Loading,loader:()=>import("../views/home/class/class
 let Classrome=Loadable({loading:Loading,loader:()=>import("../views/home/class/classrome")})
 let Student=Loadable({loading:Loading,loader:()=>import("../views/home/class/student")})
 let Stayclass=Loadable({loading:Loading,loader:()=>import("../views/home/yueparper/stayclass")})
+<<<<<<< HEAD
 let Api=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/api")})
 let Iddata=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/iddata")})
 let Port=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/port")})
 let Power=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/power")})
 let Userdata=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/userdata")})
 let View=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/view")})
+=======
+>>>>>>> luxuan
 const routes = [
     {
         component:Home,
@@ -40,6 +45,7 @@ const routes = [
             path:"/home/adduser"
         },{
             component:Usershow,
+<<<<<<< HEAD
             path:"/home/usershow",
             children:[{
                 component:Api,
@@ -63,6 +69,9 @@ const routes = [
                 path:"/home/usershow" ,
                 redirect:"/home/usershow/userdata"
             }]
+=======
+            path:"/home/usershow"
+>>>>>>> luxuan
         },{
             component:Addexam,
             path:"/home/addexam"

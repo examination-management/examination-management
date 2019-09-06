@@ -1,45 +1,42 @@
 import * as React from 'react';
 import './css/class.css'
-import { Table, Divider, Tag ,Button,Input} from 'antd';
+import { Table, Divider,Button,Input} from 'antd';
+import {inject,observer} from "mobx-react"
+const { Column } = Table;
 
-const { Column, ColumnGroup } = Table;
+@inject("classNo")
+@observer
 
-const data = [
-    {
-      key: '1',
-      firstName: '1609B',
-      lastName:'1609B',
-      address: 'New York No. 1',
-      tags: ['nice', 'developer'],
-    },
-    {
-      key: '2',
-      firstName: '1609B',
-      lastName:'1609B',
-      address: 'London No. 1',
-      tags: ['loser'],
-    },
-    {
-      key: '3',
-      firstName: '1609B',
-      lastName:'1609B',
-     
-      address: 'Sidney No. 1',
-      tags: ['cool', 'teacher'],
-    },
-  ];
-  
 class Mangement extends React.Component {
  state = {
-      size: 'large',
-      flag:true
-    };
-  
-    handleSizeChange = (e:any) => {
-      this.setState({ size: e.target.value });
+      flag:true,
+      data : [
+        {
+          key: '1',
+          firstName: '1609B',
+          lastName:'1609B',
+          address: 'New York No. 1',
+          tags: ['nice', 'developer'],
+        },
+        {
+          key: '2',
+          firstName: '1609B',
+          lastName:'1609B',
+          address: 'London No. 1',
+          tags: ['loser'],
+        },
+        {
+          key: '3',
+          firstName: '1609B',
+          lastName:'1609B',
+         
+          address: 'Sidney No. 1',
+          tags: ['cool', 'teacher'],
+        },
+      ]
     };
   public render() {
-    const { size,flag } = this.state;
+    const {flag,data} = this.state;
     return (
       <div className="layout1">
         <h2>
@@ -48,7 +45,7 @@ class Mangement extends React.Component {
         <div className="layout-content1">
           <div className="layout-content-box">
             <div>
-            <Button type="primary" className="button" onClick={this.addclassify}> 添加班级</Button>
+                <Button type="primary" className="button" onClick={this.addclassify}> 添加班级</Button>
             </div>
             <div>
               {/* <Table
@@ -85,11 +82,11 @@ class Mangement extends React.Component {
                 </div>
                 <div className="addform">
                     <p>班级名</p>
-                    <Input placeholder="班级名" />
+                    <Input placeholder="班级名" ref="ClassNo" />
                     <p>教室号</p>
-                    <Input placeholder="教室号" />
+                    <Input placeholder="教室号" ref="classroom"/>
                     <p>课程名</p>
-                    <Input placeholder="课程名" />
+                    <Input placeholder="课程名" ref="curriculum" />
                     <div className="addsub">
                         <button className="surebtn">确定</button>
                         <button className="cancelbtn" onClick={()=>{this.setState({flag:true})}}>取消</button>
@@ -105,7 +102,8 @@ class Mangement extends React.Component {
   public addclassify=()=>{
     this.setState({flag:!this.state.flag})
   }
-   
-    
+  componentDidMount(){
+    //   console.log(this)
+  }
 }
 export default Mangement

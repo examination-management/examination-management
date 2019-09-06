@@ -1,38 +1,32 @@
 import * as React from 'react';
 import './css/classrome.css'
-import { Table, Divider, Tag ,Button,Input} from 'antd';
+import { Table, Button,Input} from 'antd';
 
-const { Column, ColumnGroup } = Table;
-
-const data = [
-    {
-      key: '1',
-      firstName: '1609B',
-      address: '删除'
-    },
-    {
-        key: '2',
-        firstName: '1609B',
-        address: '删除'
-      },
-      {
-        key: '3',
-        firstName: '1609B',
-        address: '删除'
-      },
-  ];
+const { Column, } = Table;
   
 class Mangement extends React.Component {
  state = {
-      size: 'large',
+    data: [
+        {
+          key: '1',
+          firstName: '1609B',
+          address: '删除'
+        },
+        {
+            key: '2',
+            firstName: '1609B',
+            address: '删除'
+          },
+          {
+            key: '3',
+            firstName: '1609B',
+            address: '删除'
+          },
+      ],
       flag:true
     };
-  
-    handleSizeChange = (e:any) => {
-      this.setState({ size: e.target.value });
-    };
   public render() {
-    const { size,flag } = this.state;
+    const { data,flag } = this.state;
     return (
       <div className="layout1">
         <h2>

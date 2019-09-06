@@ -1,5 +1,5 @@
 import {observable, action} from 'mobx'
-import {login} from '../../service/index'
+import {login,getuserdata} from '../../service/index'
 import {setToken, removeToken} from '../../utils/index'
 import {HttpInfo, HttpType, LoginForm} from '../../types/index'
 let account = {};
@@ -10,8 +10,8 @@ class User{
     @observable isLogin: boolean = false;
     @observable account: any = account;
     @action async login(form: any): Promise<any>{
-        const result: any = await login(form);
-        if (result.code === 1){
+        let result: any = await login(form);
+               if (result.code === 1){
             if (form.remember){
                 window.localStorage.setItem('account', JSON.stringify(form));
             }else{
@@ -23,6 +23,11 @@ class User{
             }
         }
         return result;
+    }
+    @action async getuserdata():Promise<any>{
+        let result:any=await getuserdata()
+        console.log('result...', result);
+        return result
     }
     @action async logout():Promise<any>{
         removeToken();

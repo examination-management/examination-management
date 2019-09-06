@@ -13,7 +13,6 @@ ReactDOM.render(
           <BrowserRouter>
           <RouterView routes={routes} />
           </BrowserRouter>
-   
   </Provider>,
   document.getElementById("root") as HTMLElement
 );

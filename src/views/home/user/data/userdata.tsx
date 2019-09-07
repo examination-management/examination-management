@@ -35,6 +35,7 @@ class Userdata extends React.Component <Props>{
  async componentDidMount(){
       let data=await this.props.user.getuserdata()
       this.setState({data:data.data})
+      console.log(this.state.data,"sssssssss")
   }
 }
 export default Userdata;

@@ -66,4 +66,4 @@ class Classify extends React.Component {
     this.setState({isdialog:!this.state.isdialog})
   }
 }
-export default Classify
+export default Classify;

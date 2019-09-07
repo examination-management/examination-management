@@ -7,7 +7,7 @@ const { Column, ColumnGroup } = Table;
 const data = [
   {
     key: "1",
-    firstName: "试卷信息",
+    msg: "试卷信息",
     age: 32,
     address: "New York No. 1 Lake Park",
     tags: ["nice", "developer"]
@@ -96,7 +96,7 @@ class Examlist extends React.Component {
               <Column title="创建人" dataIndex="creator" key="creator" />
               <Column  title="开始时间" dataIndex="start" key="start" />
               <Column  title="结束时间" dataIndex="end" key="end" />
-              <Column  title="操作" dataIndex="operation" key="tags" />
+              <Column  title="操作" dataIndex="operation" key="operation" />
             </Table>
           </div>
         </div>

@@ -57,18 +57,23 @@ class Add extends React.Component {
     public render(){
         const { value,options } = this.state;
         return(
-            <div className="layout1">
+          <div className="warper">
+            <div className="ant-layout">
                 <h2>
-                试题添加
+                添加试题
                 </h2>
-                <div className="layout-content1">
-                    <div className="layout-content-box" >
-                        <div className="row form-item">
+                <div className="ant-layout-content">
+                    <div className="ant-layout-content-box" >
+                        <div className="ant-row ant-form-item">
                            <h4>题目信息</h4>
                            <p>题干</p>
                            <Input size="large" className="input" placeholder="large size" />
                         </div>
+<<<<<<< HEAD:src/views/home/testpaper/add.tsx
                         <div className="row form-item">
+=======
+                        <div className="ant-row ant-form-item">
+>>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/testpaper/add/add.tsx
                            <h4>题目主题</h4>
                            <div className="for-container">
                                <div className="for-controlbar">

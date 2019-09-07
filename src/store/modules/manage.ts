@@ -1,5 +1,5 @@
 import {observable,action} from "mobx"
-import {getClassNo,addClassNo,GradNew} from "../../service/manage"
+import {getClassNo,addClassNo,GradNew,removeGradNew} from "../../service/manage"
 console.log(getClassNo)
 class Manage{
     @action async getStudent(params: any): Promise<any>{
@@ -12,6 +12,10 @@ class Manage{
     }
     @action async getGradNew(params: any): Promise<any>{
         let result: any = await GradNew(params);
+        return result
+    }
+    @action async delGradNew(params: any): Promise<any>{
+        let result: any = await removeGradNew(params);
         return result
     }
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button } from "antd";
 import { Table, Divider, Tag } from "antd";
-import "./examlist.css";
+import "./css/examlist.css";
 const ButtonGroup = Button.Group;
 const { Column, ColumnGroup } = Table;
 const data = [

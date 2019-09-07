@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./css/usershow.css";
+<<<<<<< HEAD:src/views/home/user/usershow.tsx
 import { Table } from "antd";
 const columns = [
   {
@@ -15,6 +16,10 @@ const columns = [
     dataIndex: "address"
   }
 ];
+=======
+import { NavLink } from "react-router-dom";
+import RouterView from "../../../../router/routerView"
+>>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/user/usershow/usershow.tsx
 const data = [
   {
     key: "1",

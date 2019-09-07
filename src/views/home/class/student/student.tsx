@@ -32,7 +32,11 @@ const columns = [
   }
 ];
 interface Props{
+<<<<<<< HEAD:src/views/home/class/student.tsx
     class:any
+=======
+  manage:any
+>>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/class/student/student.tsx
 }
 // @inject("manage")
 class Student extends React.Component <Props>{
@@ -67,8 +71,14 @@ class Student extends React.Component <Props>{
     );
   }
   async componentDidMount() {
+<<<<<<< HEAD:src/views/home/class/student.tsx
       // let data=await this.props['manage'].getstudent()
       // this.setState({data:data.data})
+=======
+      let data=await this.props['manage'].getstudent()
+      console.log(data)
+      this.setState({data:data.data})
+>>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/class/student/student.tsx
   }
 }
 export default Student;

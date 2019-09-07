@@ -7,4 +7,11 @@ body {
 }
 .ant-layout-content{
   padding: 0 !important;
+
+}
+.ant-layout{
+  padding: 0 !important;
+}
+.ant-menu-dark{
+  height: 700px !important;
 }

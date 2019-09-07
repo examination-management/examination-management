@@ -5,7 +5,6 @@ import RouterView from "./router/routerView";
 import { routes } from "./router/routes";
 import { Provider } from "mobx-react";
 import { BrowserRouter} from 'react-router-dom'
-
 import store from "./store";
 import "antd/dist/antd.css";
 ReactDOM.render(

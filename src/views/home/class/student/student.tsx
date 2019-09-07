@@ -32,7 +32,7 @@ const columns = [
   }
 ];
 interface Props{
-    manage:any
+  manage:any
 }
 @inject("manage")
 class Student extends React.Component <Props>{
@@ -67,7 +67,8 @@ class Student extends React.Component <Props>{
     );
   }
   async componentDidMount() {
-      let data=await this.props.manage.getstudent()
+      let data=await this.props['manage'].getstudent()
+      console.log(data)
       this.setState({data:data.data})
   }
 }

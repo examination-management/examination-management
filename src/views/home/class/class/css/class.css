@@ -8,12 +8,12 @@
 }
 .layout1 h2{
     display: block;
-    height: 50px;
-    line-height: 50px;
-    padding-left: 20px;
-
+    height: 28px;
+    line-height: 28px;
+    padding: 20px;
+    margin-top: 10px;
 }
-.layout-content1{
+ .layout-content1{
     width: 100%;
     height: 100%;
     background: #f0f2f5;
@@ -24,13 +24,17 @@
     margin: 20px;
 }
 .layout-content-box{
-    width: 90%;
+    width: 100%;
     height: 90%;
     background: #fff;
     border-radius: 20px;
-    margin:20px auto;
+    margin: auto;
 }
-.ant-table-wrapper{
+.table-wrapper{
+    width: 100%;
+    
+}
+.table-wrapper .ant-table-wrapper{
     width: 90%;
     margin-left: 10px;
 }

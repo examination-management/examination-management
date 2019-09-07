@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./css/usershow.css";
 import { NavLink } from "react-router-dom";
-import RouterView from "../../../router/routerView"
+import RouterView from "../../../../router/routerView"
 const data = [
   {
     key: "1",

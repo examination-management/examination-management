@@ -1,7 +1,7 @@
 import * as React from "react";
 import { WrappedFormUtils } from "antd/lib/form/Form";
 import { Input, InputNumber, DatePicker, Button } from "antd";
-import "./adexam.css";
+import "./css/adexam.css";
 const { RangePicker } = DatePicker;
 interface Props {
   form: WrappedFormUtils;

@@ -38,7 +38,7 @@ class Classrome extends React.Component {
             <div>
             <Button type="primary" className="button" onClick={this.addclassify}> 添加教室</Button>
             </div>
-            <div>
+            <div className="table-wrapper">
               <Table dataSource={data}>
               <Column title="教室号" dataIndex="firstName" key="firstName" />
                 <Column title="操作" dataIndex="address" key="address" />

@@ -4,9 +4,13 @@ h2{
     padding: 20px 0;
     margin: 10px 0;
 }
+<<<<<<< HEAD:src/views/home/testpaper/css/add.css
 .ant-layout-content{
     padding: 0 !important;
 }
+=======
+
+>>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/testpaper/add/css/add.css
 .ant-form-item .input{
     width: 60%;
     height: 40px;

@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
-export default class routerView extends Component {
+export default class RouterView extends React.Component{
   constructor(props) {
     super(props);
   }
   render() {
     let { routes } = this.props;
-    let routerArr = routes.filter(item => !item.redirect);
-    let redirectArr = routes.filter(item => item.redirect);
+    console.log(routes,"view")
+    let routerArr = routes?routes.filter(item => !item.redirect):"";
+    let redirectArr =  routes?routes.filter(item => item.redirect):"";
     return (
       <Switch>
-        {routerArr.map((item, index) => (
+        {routerArr?routerArr.map((item, index) => (
           <Route
             path={item.path}
             key={index}
@@ -23,10 +24,10 @@ export default class routerView extends Component {
               );
             }}
           ></Route>
-        ))}
-        {redirectArr.map((item, index) => (
+        )):""}
+        {redirectArr?redirectArr.map((item, index) => (
           <Redirect from={item.path} key={index} to={item.redirect}></Redirect>
-        ))}
+        )):""}
       </Switch>
     );
   }

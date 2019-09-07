@@ -1,13 +1,9 @@
 import * as React from 'react';
 import './css/classrome.css'
 import { Table, Button,Input} from 'antd';
-<<<<<<< HEAD:src/views/home/class/classrome.tsx
 
 const { Column, } = Table;
   
-=======
-const { Column, } = Table; 
->>>>>>> 88e6ccfa2b2fd1ab0713f08fe788fae45de85cb1:src/views/home/class/classrome/classrome.tsx
 class Mangement extends React.Component {
  state = {
     data: [

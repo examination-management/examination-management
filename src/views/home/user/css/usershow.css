@@ -21,10 +21,7 @@
 
 .warper .header .navbox {
   flex: 1;
-<<<<<<< HEAD
   width: 700px;
-=======
->>>>>>> luxuan
   display: flex;
   border: 1px solid #ccc;
 }
@@ -45,10 +42,7 @@
 
 .warper .showbox h1 {
   font-size: 28px;
-<<<<<<< HEAD
   margin-bottom: 14px;
-=======
->>>>>>> luxuan
 }
 
 .warper .showbox li {
@@ -56,10 +50,7 @@
   height: 40px;
   display: flex;
 }
-<<<<<<< HEAD
 
 .warper .showbox .ant-table-row {
   height: 52px;
 }
-=======
->>>>>>> luxuan

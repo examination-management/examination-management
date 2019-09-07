@@ -10,10 +10,6 @@ class Question{
         let result: any = await addQuestion(params);
         return result
     }
-    @action async addQuestion(params:any):Promise<any>{
-        let result: any = await addQuestion(params);
-        return result
-    }
 }
 
 export default Question;

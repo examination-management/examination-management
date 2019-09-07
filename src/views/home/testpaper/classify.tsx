@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-class Classify extends React.Component {
-    public render(){
-        return(
-            <div>分类</div>
-        )
-    }
-    
-}
-export default Classify
-=======
 import * as React from "react";
 import "./css/classify.css";
 class Classify extends React.Component {
@@ -79,4 +67,3 @@ class Classify extends React.Component {
   }
 }
 export default Classify;
->>>>>>> miena

@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Input, Select, Table } from "antd";
+import { inject } from "mobx-react";
+@inject("manage")
 class Classrome extends React.Component {
     public render(){
         return(

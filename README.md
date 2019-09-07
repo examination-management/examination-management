@@ -30,7 +30,3 @@ npm install --save-dev mobx mobx-react
 - 引入antd
 ```js
 npm install --save-dev antd
-<<<<<<< HEAD
-=======
-
->>>>>>> 2e7622cbd31c9bda972976392d33067e6fc93bff

@@ -3,6 +3,7 @@ import React from "react"
 function Loading(){
     return <div></div>
 }
+<<<<<<< HEAD
 let Home=Loadable({loading:Loading,loader:()=>import("../views/home/index")})
 let Login=Loadable({loading:Loading,loader:()=>import("../views/login")})
 let Add=Loadable({loading:Loading,loader:()=>import("../views/home/testpaper/add")})
@@ -22,6 +23,27 @@ let Port=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/po
 let Power=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/power")})
 let Userdata=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/userdata")})
 let View=Loadable({loading:Loading,loader:()=>import("../views/home/user/data/view")})
+=======
+let Home=Loadable({loading:Loading,loader:()=>import("@/index")})
+let Login=Loadable({loading:Loading,loader:()=>import("../views/login")})
+let Add=Loadable({loading:Loading,loader:()=>import("@/testpaper/add/add")})
+let Classify=Loadable({loading:Loading,loader:()=>import("@/testpaper/classify/classify")})
+let Lookover=Loadable({loading:Loading,loader:()=>import("@/testpaper/lookover/lookover")})
+let Adduser=Loadable({loading:Loading,loader:()=>import("@/user/adduser/adduser")})
+let Usershow=Loadable({loading:Loading,loader:()=>import("@/user/usershow/usershow")})
+let Addexam=Loadable({loading:Loading,loader:()=>import("@/exam/addexam/addexam")})
+let Examlist=Loadable({loading:Loading,loader:()=>import("@/exam/examlist/examlist")})
+let Class=Loadable({loading:Loading,loader:()=>import("@/class/class/class")})
+let Classrome=Loadable({loading:Loading,loader:()=>import("@/class/classrome/classrome")})
+let Student=Loadable({loading:Loading,loader:()=>import("@/class/student/student")})
+let Stayclass=Loadable({loading:Loading,loader:()=>import("@/yueparper/stayclass/stayclass")})
+let Api=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/api")})
+let Iddata=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/iddata")})
+let Port=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/port")})
+let Power=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/power")})
+let Userdata=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/userdata")})
+let View=Loadable({loading:Loading,loader:()=>import("@/user/usershow/data/view")})
+>>>>>>> master
 const routes = [
     {
         component:Home,

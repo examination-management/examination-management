@@ -16,6 +16,7 @@ class Mangement extends React.Component {
         {
           grade_id: '1',
           grade_name: '1609B',
+          room_id:'',
           room_text:'1609B',
           subject_text: 'New York No. 1',
           tags: ['nice', 'developer'],
@@ -46,7 +47,7 @@ class Mangement extends React.Component {
                   <span>
                   <a>修改</a>
                     <Divider type="vertical" />
-                    <a>删除</a>
+                    <a onClick={this.remove}>删除</a>
                   </span>
                 )}
               />
@@ -86,16 +87,25 @@ class Mangement extends React.Component {
       [name]:event.target.value
     })
   }
+
   public addclassify=()=>{
     this.setState({flag:!this.state.flag})
   }
+
   public addlist =()=>{
     this.addgrade({grade_name:this.state.classNo,room_id :this.state.classrome,subject_id :this.state.student})
-    
+    this.getlist()
   }
+
   public componentDidMount(){
     this.getlist()
   }
+
+  public remove=(e:any)=>{
+    console.log(this)
+    // this.delGradNew(id)
+  }
+
   //获取班级数据
   public getlist = async () => {
     const reult = await this.props["manage"].getStudent();
@@ -107,9 +117,10 @@ class Mangement extends React.Component {
     const reult = await this.props["manage"].addStudent(data);
     console.log(reult)
   }
-  public getGradnew = async ()=> {
-    const reult = await this.props["manage"].getGradNew();
-  
+  public delGradNew =async (id:any)=> {                
+    const reult = await this.props["manage"].delGradNew({room_id:id});
+    console.log(reult)
   }
+  
 }
 export default Mangement

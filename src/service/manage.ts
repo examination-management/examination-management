@@ -5,9 +5,13 @@ export let getClassNo=(params:object)=>{
 }
 
 export let addClassNo=(params:object)=>{
+    console.log(params)
     return request.post("/manger/grade",params)
 }
 
 export let GradNew=(params:object)=>{
     return request.get("/manger/student/new",params)
+}
+export let removeGradNew=(params:object)=>{
+    return request.delete("/manger/room/delete",params)
 }

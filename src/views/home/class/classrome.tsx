@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { inject } from "mobx-react";
+@inject("manage")
 class Classrome extends React.Component {
     public render(){
         return(

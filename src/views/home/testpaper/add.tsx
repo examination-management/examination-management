@@ -68,6 +68,7 @@ class Add extends React.Component {
                            <p>题干</p>
                            <Input size="large" className="input" placeholder="large size" />
                         </div>
+                        <div className="ant-row ant-form-item">
                         <div className="row form-item">
                            <h4>题目主题</h4>
                            <div className="for-container">
@@ -124,7 +125,7 @@ class Add extends React.Component {
                                 />
                             </div>
                         </div>
-                        <div className="row form-item">
+                        <div className="ant-row ant-form-item">
                            <h4>答案信息</h4>
                            <div className="for-container">
                                <div className="for-controlbar">
@@ -158,6 +159,7 @@ class Add extends React.Component {
                     </div>
                 </div>
             </div>
+          </div>
         )
     }
 

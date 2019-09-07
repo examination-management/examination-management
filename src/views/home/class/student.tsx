@@ -2,7 +2,7 @@ import * as React from "react";
 import "./css/student.css";
 import { Input, Select, Table } from "antd";
 const { Option } = Select;
-// import { inject } from "mobx-react";
+import { inject } from "mobx-react";
 const columns = [
   {
     title: "姓名",
@@ -32,9 +32,9 @@ const columns = [
   }
 ];
 interface Props{
-    class:any
+    manage:any
 }
-// @inject("manage")
+@inject("manage")
 class Student extends React.Component <Props>{
   state = {
     data: []
@@ -67,8 +67,8 @@ class Student extends React.Component <Props>{
     );
   }
   async componentDidMount() {
-      // let data=await this.props['manage'].getstudent()
-      // this.setState({data:data.data})
+      let data=await this.props.manage.getstudent()
+      this.setState({data:data.data})
   }
 }
 export default Student;

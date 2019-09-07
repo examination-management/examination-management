@@ -1,9 +1,10 @@
 import * as React from 'react';
 import './css/classrome.css'
 import { Table, Button,Input} from 'antd';
-
+import {inject,observer} from "mobx-react"
 const { Column, } = Table;
   
+@inject("manage")
 class Mangement extends React.Component {
  state = {
     data: [

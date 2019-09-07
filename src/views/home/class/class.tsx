@@ -4,8 +4,13 @@ import { Table, Divider,Button,Input} from 'antd';
 // import {inject,observer} from "mobx-react"
 const { Column } = Table;
 
+<<<<<<< HEAD
 // @inject("classNo")
 // @observer
+=======
+@inject("manage")
+@observer
+>>>>>>> f98e71c9869f4ff3145459a0d8c0b86b26ee24fe
 
 class Mangement extends React.Component {
  state = {
@@ -48,11 +53,6 @@ class Mangement extends React.Component {
                 <Button type="primary" className="button" onClick={this.addclassify}> 添加班级</Button>
             </div>
             <div>
-              {/* <Table
-                columns={columns}
-                expandedRowRender={record => <p style={{ margin: 0 }}>{record.description}</p>}
-                dataSource={data}
-              /> */}
               <Table dataSource={data}>
   
       <Column title="班级名" dataIndex="firstName" key="firstName" />

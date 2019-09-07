@@ -68,6 +68,7 @@ class Student extends React.Component <Props>{
   }
   async componentDidMount() {
       let data=await this.props['manage'].getstudent()
+      console.log(data)
       this.setState({data:data.data})
   }
 }

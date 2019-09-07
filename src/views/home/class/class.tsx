@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Input, Select, Table } from "antd";
 class Class extends React.Component {
     public render(){
         return(

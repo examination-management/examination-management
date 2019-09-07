@@ -4,13 +4,8 @@ import { Table, Divider,Button,Input} from 'antd';
 // import {inject,observer} from "mobx-react"
 const { Column } = Table;
 
-<<<<<<< HEAD
-// @inject("classNo")
+// @inject("manage")
 // @observer
-=======
-@inject("manage")
-@observer
->>>>>>> f98e71c9869f4ff3145459a0d8c0b86b26ee24fe
 
 class Mangement extends React.Component {
  state = {
@@ -19,21 +14,21 @@ class Mangement extends React.Component {
         {
           key: '1',
           firstName: '1609B',
-          lastName:'1609B',
+          // lastName:'1609B',
           address: 'New York No. 1',
           tags: ['nice', 'developer'],
         },
         {
           key: '2',
           firstName: '1609B',
-          lastName:'1609B',
+          // lastName:'1609B',
           address: 'London No. 1',
           tags: ['loser'],
         },
         {
           key: '3',
           firstName: '1609B',
-          lastName:'1609B',
+          // lastName:'1609B',
          
           address: 'Sidney No. 1',
           tags: ['cool', 'teacher'],
@@ -52,24 +47,23 @@ class Mangement extends React.Component {
             <div>
                 <Button type="primary" className="button" onClick={this.addclassify}> 添加班级</Button>
             </div>
-            <div>
+            <div className="table-wrapper">
               <Table dataSource={data}>
-  
-      <Column title="班级名" dataIndex="firstName" key="firstName" />
-      <Column title="课程名" dataIndex="lastName" key="lastName" />
-    <Column title="教室号" dataIndex="address" key="address" />
-    <Column
-      title="操作"
-      key="action"
-      render={(text, record:any) => (
-        <span>
-         <a>修改 {record.lastName}</a>
-          <Divider type="vertical" />
-          <a>删除</a>
-        </span>
-      )}
-    />
-  </Table>
+                <Column title="班级名" dataIndex="firstName" key="firstName" />
+                <Column title="课程名" dataIndex="lastName" key="lastName" />
+              <Column title="教室号" dataIndex="address" key="address" />
+              <Column
+                title="操作"
+                key="action"
+                render={(text, record:any) => (
+                  <span>
+                  <a>修改 {record.lastName}</a>
+                    <Divider type="vertical" />
+                    <a>删除</a>
+                  </span>
+                )}
+              />
+            </Table>
             </div>
           </div>
          

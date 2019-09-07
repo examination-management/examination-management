@@ -1,10 +1,9 @@
 import * as React from 'react';
 import './css/classrome.css'
 import { Table, Button,Input} from 'antd';
-import {inject,observer} from "mobx-react"
+
 const { Column, } = Table;
   
-@inject("manage")
 class Mangement extends React.Component {
  state = {
     data: [
@@ -38,7 +37,7 @@ class Mangement extends React.Component {
             <div>
             <Button type="primary" className="button" onClick={this.addclassify}> 添加教室</Button>
             </div>
-            <div>
+            <div className="table-wrapper">
               <Table dataSource={data}>
               <Column title="教室号" dataIndex="firstName" key="firstName" />
                 <Column title="操作" dataIndex="address" key="address" />

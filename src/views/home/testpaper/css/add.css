@@ -1,0 +1,109 @@
+h2{
+    width: 100%;
+    height: 70px;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+.ant-layout-content{
+    padding: 0 !important;
+}
+.ant-form-item .input{
+    width: 60%;
+    height: 40px;
+    margin: 20px;
+}
+.ant-layout-content-box{
+   width: 1030px;
+   height: 1180px;
+    background: #fff;
+    border-radius: 20px;
+    margin:20px auto;
+}
+.ant-form-item{
+    width: 100%;
+}
+.ant-form-item h4{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.ant-form-item p{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.cascader-list{
+    width: 100%;
+    height: 255px;
+}
+.cascader{
+    width: 100%;
+    height: 80px;
+    padding-left: 20px;
+}
+.cascader h4{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+   
+}
+.button{
+    margin: 20px;
+}
+.for-container{
+    width: 90%;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.for-controlbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.for-controlbar ul{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.for-controlbar ul li{
+    flex: 1;
+    height: 100%;
+    line-height: 40px;
+    display: flex;
+}
+.for-controlbar ul li i{
+    display: block;
+    height: 100%;
+    line-height: 40px;
+   
+}
+.for-container-box{
+    width: 100%;
+   flex: 1;
+     display: flex;
+}
+.for-container-left{
+    width: 10%;
+    height: 100%;
+    
+    line-height: 100px;
+    background: #f0f2f5;
+}
+.for-container-left p{
+    color: #fff;
+    background: #f0f2f5;
+}
+.for-container-right{
+    height: 100%;
+    flex: 1;
+}
+.input1{
+    border: none;
+}

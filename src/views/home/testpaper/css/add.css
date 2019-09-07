@@ -4,7 +4,9 @@ h2{
     padding: 20px 0;
     margin: 10px 0;
 }
-
+.ant-layout-content{
+    padding: 0 !important;
+}
 .ant-form-item .input{
     width: 60%;
     height: 40px;

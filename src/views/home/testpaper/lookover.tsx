@@ -11,7 +11,6 @@ class Lookover extends React.Component {
   };
   public render() {
     const { classifydata } = this.state;
-    console.log(classifydata);
     return (
       <div className="content-wrap">
         <div>

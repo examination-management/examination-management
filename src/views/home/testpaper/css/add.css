@@ -1,4 +1,15 @@
 
+h2{
+    width: 100%;
+    height: 70px;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+.ant-layout-content{
+    padding: 0 !important;
+}
+
+
 .layout1{
     width: 100%;
     height: 750px;
@@ -19,27 +30,28 @@
     background: #f0f2f5;
 }
 .form-item .input{
+
     width: 60%;
     height: 40px;
     margin: 20px;
 }
-.layout-content-box{
-    width: 90%;
-    height: 90%;
+.ant-layout-content-box{
+   width: 1030px;
+   height: 1180px;
     background: #fff;
     border-radius: 20px;
     margin:20px auto;
 }
-.form-item{
+.ant-form-item{
     width: 100%;
 }
-.form-item h4{
+.ant-form-item h4{
     width: 100%;
     height: 40px;
     line-height: 40px;
     padding-left: 20px;
 }
-.form-item p{
+.ant-form-item p{
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -69,14 +81,11 @@
     background: #fff;
     border-radius: 10px;
     border: 1px solid #ccc;
-    margin: 20px;
 }
-
 .for-controlbar{
     width: 100%;
     height: 100%;
     display: flex;
-  
     flex-direction: column;
 }
 .for-controlbar ul{

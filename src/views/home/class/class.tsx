@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './css/class.css'
 import { Table, Divider,Button,Input} from 'antd';
-import {inject,observer} from "mobx-react"
+// import {inject,observer} from "mobx-react"
 const { Column } = Table;
 
-@inject("classNo")
-@observer
+// @inject("classNo")
+// @observer
 
 class Mangement extends React.Component {
  state = {

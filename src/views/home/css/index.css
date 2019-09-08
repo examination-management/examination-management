@@ -35,6 +35,7 @@
     background: #f0f2f5;
     position: relative;
     display: flex;
+    overflow-y: auto;
 }
 .ant-layout, .ant-layout * {
     box-sizing: border-box;

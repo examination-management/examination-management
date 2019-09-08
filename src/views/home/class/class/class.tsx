@@ -52,12 +52,16 @@ class Mangement extends React.Component {
                 <Column title="教室号" dataIndex="room_text" key="room_text" />
                 <Column
                   title="操作"
-                  key="action"
+                  key="grade_id"
+                
                   render={(text, record: any) => (
                     <span>
                       <a>修改</a>
                       <Divider type="vertical" />
-                      <a>删除</a>
+                      <a onClick={()=>{
+                        console.log(this)
+                        // this.remove()
+                      }}>删除</a>
                     </span>
                   )}
                 />
@@ -127,32 +131,52 @@ class Mangement extends React.Component {
       [name]: event.target.value
     });
   };
+
   public addclassify = () => {
     this.setState({ flag: !this.state.flag });
   };
+  //添加班级
   public addlist = () => {
     this.addgrade({
       grade_name: this.state.classNo,
       room_id: this.state.classrome,
       subject_id: this.state.student
     });
+    
+      this.getlist();
   };
+  //删除班级
+  public remove(){
+    console.log(this)
+  }
+
   public componentDidMount() {
     this.getlist();
   }
   //获取班级数据
   public getlist = async () => {
     const reult = await this.props["manage"].getStudent();
+    console.log(reult)
     this.setState({ data: reult.data });
   };
   //添加班级数据
   public addgrade = async (data: any) => {
-    console.log(data);
     const reult = await this.props["manage"].addStudent(data);
-    console.log(reult);
+    this.setState({ flag: !this.state.flag });
+   
+    this.upDate({grade_id:reult.grade_id})
   };
   public getGradnew = async () => {
     const reult = await this.props["manage"].getGradNew();
   };
+  public upDate = async (id:any) => {
+    console.log(id)
+    const reult = await this.props["manage"].updateClass(id);
+  };
+  public newClass = async () => {
+    const reult = await this.props["manage"].NewClass();
+    console.log(reult)
+  };
+  
 }
 export default Mangement;

@@ -16,8 +16,7 @@ class Addexam extends React.Component<Props> {
         style={{
           width: "100%",
           height: "100%",
-          background: "#f0f2f5",
-          padding: "15px"
+          background: "#f0f2f5"
         }}
       >
         <h2 style={{ padding: "20px 0px", marginTop: "10px" }}> 添加考试</h2>

@@ -8,10 +8,10 @@ class Oconent extends React.Component {
         return(
             <Content
               style={{
-                background: '#fff',
+                background: '#f0f2f5',
                 margin: 0,
                 minHeight: 280,
-                padding: 24,
+                padding:"0 24px 24px 24px",
               }}
             >
                <RouterView routes={routes} />

@@ -11,12 +11,14 @@
   height: 71px;
   padding: 20px 0;
   margin: 10px 0;
+  background: #f0f2f5;
 }
 
 .warper .searchbox {
   width: 100%;
   height: 40px;
   display: flex;
+  margin-bottom: 4px;
 }
 
 .warper .searchbox .useript {
@@ -50,4 +52,12 @@
 .warper .content {
   width: 100%;
   background: #fff;
+}
+
+.warper .content th {
+  background: #f0f2f5;
+}
+
+.ant-table-wrapper {
+  padding: 0;
 }

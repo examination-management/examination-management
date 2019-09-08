@@ -43,7 +43,6 @@ class Student extends React.Component <Props>{
     let { data } = this.state;
     return (
       <div className="warper">
-        drdr
         <div className="header">
           <h2>学生管理</h2>
         </div>

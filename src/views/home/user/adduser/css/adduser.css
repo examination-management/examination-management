@@ -6,7 +6,6 @@
     flex: auto;
     background: #f0f2f5;
     min-height: 0;
-    padding: 0px 24px 24px;
     overflow-y: scroll;
 }
 .title{
